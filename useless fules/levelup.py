@@ -19,6 +19,7 @@ XP levels
     test xp: 50
 }
 """
+
 #xp = int(input("xp = "))
 lvl = 0
 remxp = 0
