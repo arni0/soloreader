@@ -1,6 +1,6 @@
 import pickle as pk
 import sample
-import useless_fules.levelup as lp
+import thrasth.levelup as lp
 
 x = 23
 y = 90
