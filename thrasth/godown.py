@@ -14,4 +14,6 @@ player_stats = {
     "Daily_task_completed": True
 }
 
-print(player_stats)
+#print(player_stats)
+
+print("nigge".lower)

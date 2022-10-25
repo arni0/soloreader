@@ -1,14 +1,13 @@
 import pickle
 
-player = "kurosai"
-level_state = "bruh"
+timer_prop = True
 
 # saving
 with open('savefile.dat', 'wb') as f:
-    pickle.dump([player, level_state], f, protocol=2)
-print(player + level_state)
+    pickle.dump((timer_prop), f, protocol=2)
+print(timer_prop)
 
 # loading
 with open('savefile.dat', 'rb') as f:
-    player, level_state = pickle.load(f)
-print("done " + player + level_state)
+    timer_prop = pickle.load(f)
+print("done " + str(timer_prop))

@@ -1,6 +1,6 @@
 #from pickle import TRUE
 import time as tm
-from datetime import datetime as dtm
+import pickle as pk
 
 # Get current date and time
 #print(time.ctime(0))
@@ -13,7 +13,7 @@ from datetime import datetime as dtm
 # when timer stopped, get final time and calculate delta time
 # if it is paused, get delta pause from final and initial time
 
-timer_prop = None
+fruct = input(">> ")
 
 iTime = int(0)
 fTime = int(0)
@@ -23,7 +23,7 @@ def initTime(iTime, dTime, fTime):
     iTime = tm.time()
     print("iTime: " + str(iTime))
     
-    ask = str(input("Stop timer [Y/N] \n -> "))
+    ask = input("Stop timer [Y/N] \n -> ")
 
     if ask.lower() == "y":
         timer_prop = False
@@ -42,22 +42,25 @@ def initTime(iTime, dTime, fTime):
 
 def getTime(iTime, dTime):
 
-    inpTime = str(input("Start timer [Y/N] \n -> "))
+    inputTime = str(input("Start timer [Y/N] \n -> "))
     
-    if inpTime.lower() == "y":
+    if inputTime.lower() == "y":
         timer_prop = True
         print(timer_prop)
 
         initTime(iTime, fTime, dTime)
-    elif inpTime.lower() == "n":
+    elif inputTime.lower() == "n":
         timer_prop = False
         print(timer_prop)
-
+        
         exit()
     else:
-        print("Invalid statement.")    
+        print("Invalid statement.")
 
-getTime(iTime, dTime)
+if fruct.lower() == "timer":
+    getTime(iTime, dTime)
+else:
+    print("Invalid input")
 
 #if timer prop != True, store fTime
 #else timer prop == True, store iTime
